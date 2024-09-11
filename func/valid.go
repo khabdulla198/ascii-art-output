@@ -16,11 +16,11 @@ func Validation(args []string) (string, string, string, error) {
 	//create the flag
 	fl.StringVar(&output, "output", "", "The destination file where the Ascii-Art is saved.")
 
-	//seperates flags from non-flag argument and stores the values that is in the output flag into output variable.
+	//seperates flags from non-flag argument and stores the values into its respectable place, so the output flag value will be into output variable.
 	fl.Parse(args)
 
 	//stops users from overwriting bannerstyles by using the as them as txt file names
-	if output== "standard.txt" || output == "thinkertoy.txt" || output == "shadow.txt"{
+	if output == "standard.txt" || output == "thinkertoy.txt" || output == "shadow.txt" {
 		return "", "", "", fmt.Errorf("You cannot overwrite banner styles by using them as txt file names")
 	}
 
