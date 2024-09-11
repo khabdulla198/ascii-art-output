@@ -53,7 +53,7 @@ func main() {
 					fmt.Println(err)
 					return
 				}
-				result += asciiArt 
+				result += asciiArt
 			}
 
 		}
